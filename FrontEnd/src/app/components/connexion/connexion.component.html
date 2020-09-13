@@ -1,0 +1,34 @@
+<div class="container mx-auto">
+	<h2>Déclinez votre identité !</h2>
+	<p>Merci de faire partie de nos membres !</p>
+</div>
+<div class="container mx-auto">
+      <form  class="register-form mx-auto" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      	<div class="form-group">
+            <label for="Email" class="text-uppercase">Email</label>
+            <input type="text" class="form-control" 
+            formControlName="Email" 
+            class="form-control" 
+            [ngClass]="{ 'is-invalid': submitted && f.Email.errors }" >
+			<div *ngIf="submitted && f.Email.errors" class="invalid-feedback">
+                <div *ngIf="f.Email.errors">Veuillez rentrer une adresse mail</div>
+                                       
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Password" class="text-uppercase">Password</label>
+            <input type="password" class="form-control" 
+            formControlName="Password" 
+            class="form-control" 
+            [ngClass]="{ 'is-invalid': submitted && f.Password.errors}" >
+			<div *ngIf="submitted && f.Password.errors" class="invalid-feedback">
+                <div *ngIf="f.Password.errors">Veuillez rentrer un mot de passe</div>
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+
+</div>
+               

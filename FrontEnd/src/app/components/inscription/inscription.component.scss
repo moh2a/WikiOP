@@ -1,0 +1,31 @@
+#bg {
+  /* The image used */
+  background-image: url("../../../assets/fondInscription.jpg");
+
+  /* Full height */
+  height: 100%; 
+  padding-top: 10px;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.conteneurTrans{
+	background-color: #5E6669;
+	color: #07A6FE;
+	text-align: center;
+	
+	border-radius: 8px;
+	opacity: 0.9;
+	margin: auto;
+	margin-top: 10px;
+}
+.form-group{
+	opacity: 0.7;
+	color: #E73111;
+	font-weight: bold;
+	font-opacity:1;
+}
+.container-fluid{
+	margin: auto;
+}

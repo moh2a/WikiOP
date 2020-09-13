@@ -1,0 +1,77 @@
+.navbar {
+    border-radius: 0px;
+    margin-bottom: 0;
+    padding: 0;
+    padding-left: 10px;
+    min-height:50px; 
+    background-color: #ebf2f2;
+}
+#premiereBanniere{
+	max-height: 75px;
+}
+p{
+	margin-bottom: 0px;
+	padding: inherit;
+	height: 100%;
+	text-align: center;
+}
+.col{
+	text-align: center;
+}
+.navbar-dark .navbar-nav .nav-link{
+	color:#DBB05F;
+	border-radius: 0px;
+	height: 100%;
+}
+.boutonHeader{
+	height: 100%;
+	padding: 10px;
+	color:#DBB05F;
+	border: 2px solid;
+	border-style: none none solid none;
+	width: 100%;
+	text-align: center;
+	background-color: #ebf2f2;
+}
+.deconnexion{
+	height: 100%;
+	padding: 10px;
+	color:#fff;
+	width: 100%;
+	text-align: center;
+	//background-color: #FA9090;
+}
+.connexion{
+
+	height: 100%;
+	padding: 10px;
+	color:#fff;
+
+	width: 100%;
+	text-align: center;
+	//background-color: #90FAAC;
+
+}
+.boutonHeader:hover{
+	background-color:#fff;
+}
+.boutonHeader:focus {
+	background-color:#F8FEFE;
+	border-style: none;
+	border-style: none none none none;
+}
+.nav-item:hover{
+	background-color:#F8FEFE;
+}
+.active{
+	background-color: #ebf2f2;
+	border: 2px solid;
+	border-style: none none solid none;
+}
+.active:hover{
+	background-color: #F8FEFE;
+}
+.navbar-toggler{
+	color:#DBB05F;
+	//background-color: #DBB05F;
+}

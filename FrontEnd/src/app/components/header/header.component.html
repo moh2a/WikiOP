@@ -1,0 +1,64 @@
+<div class="container">
+   <div class="row">
+      <div class="col">
+             <img src="../../../assets/ic1.png" alt="Logo" style="width:40px;">
+      </div>
+      <div class="col">
+        <img src="../../../assets/ic2.png" alt="Logo" style="width:40px;">
+      </div>
+      <div class="col">
+             <img src="../../../assets/ic1.png" alt="Logo" style="width:40px;">
+      </div>
+      <div class="col">
+        <img src="../../../assets/ic2.png" alt="Logo" style="width:40px;">
+      </div>
+   </div>
+</div>
+
+
+<nav class="navbar navbar-expand-sm navbar-dark ">
+  <a class="navbar-brand" [routerLink]="['home']">
+    <img src="../../../assets/logoBanniere.png" alt="Logo" style="width:40px;">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#DBB05F; font-size:28px;"></i></span>
+      </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav mr-auto ">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['home']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><p>Accueil</p></a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" [routerLink]="['/personnages']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><p>Personnages</p></a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" [routerLink]="['/films']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><p>Films</p></a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" [routerLink]="['/theories']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><p>Théories</p></a>
+      </li>
+    </ul>
+
+  </div>
+        
+    <ul class="nav navbar-nav ml-auto">
+      <li *ngIf="authentified; else notAuthentified" class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['/mon-profil']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><p>Mon profil</p></a>
+      </li>
+      <ng-template #notAuthentified>
+        <li class="nav-item" >
+          <a class="nav-link" [routerLink]="['/inscription']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><p>Inscription</p></a>
+        </li>
+      </ng-template>
+      <li *ngIf="authentified; else pasAuth" class="nav-item" [routerLinkActive]="['active']">
+        <button  class="btn btn-danger  deconnexion" value="Deconnexion" (click)="deco()">Deconnexion</button>
+      </li>
+      <ng-template #pasAuth>
+        <li class="nav-item">
+          <button  class="btn  btn-success connexion" value="Connexion" (click)="connexion()">Connexion</button>
+        </li>
+
+      </ng-template>
+    </ul>
+   
+</nav>

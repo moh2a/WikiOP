@@ -1,0 +1,95 @@
+<div class="container-fluid fond">
+	<form [formGroup]="registerForm"(ngSubmit)="onSubmit()">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="hero-image">
+				  <div class="hero-text">
+				    <h3>Sélectionner une photo</h3>
+				    <div class="form-group">
+				    	<label for="Photo">Photo</label>
+					    <input type="file" id="Photo" formControlName="Photo" name="Photo" (change)="onFileChanged($event)"  />
+					    <div *ngIf="!imageValide">
+					    	<p>Seuls les images aux formats suivants sont accéptées : .jpg, .png, .jpeg, .gif</p>
+	                    </div>
+	                </div>
+				  </div>
+				</div>
+	        </div>
+	        
+	        <div class="col-md-8">
+	        	<div class="conteneurInfos">
+	        		<div class="row">
+	        			<div class="col-lg-6">
+					        <div class="form-group">
+							    <label for="Nom">Nom</label>
+							    <input type="text" formControlName="Nom" class="form-control"  placeholder="Nom" [ngClass]="{ 'is-invalid': submitted && f.Nom.errors }">
+							    <div *ngIf="submitted && f.Nom.errors" class="invalid-feedback">Le nom est obligatoire</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+							    <label for="Prenom">Prenom</label>
+							    <input type="text" formControlName="Prenom" class="form-control" placeholder="Prenom"[ngClass]="{ 'is-invalid': submitted && f.Prenom.errors }">
+							    <div *ngIf="submitted && f.Prenom.errors" class="invalid-feedback">Le prénom est obligatoire</div>
+
+							</div>
+						</div>
+						<div class="col-lg-6">
+					        <div class="form-group">
+							    <label for="Age">Age</label>
+							    <input class="form-control" formControlName="Age" type="number" name="Age" />
+							</div>
+						</div>
+						<div class="col-lg-6">
+					        <div class="form-group">
+							    <label for="Taille">Taille</label>
+							    <input class="form-control" formControlName="Taille"  type="number"placeholder="Taille"[ngClass]="{ 'is-invalid': submitted && f.Taille.errors }">
+							    <div *ngIf="submitted && f.Taille.errors" class="invalid-feedback">La taille est obligatoire</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							  <div class="form-group">
+							    <label for="Type">Type</label>
+							    <select formControlName="Type" class="form-control" >
+							      <option>Pirate</option>
+							      <option>Marine</option>
+							      <option>Revolutionnaire</option>
+							      <option>Gouvernement</option>
+							      <option>Normal</option>
+							    </select>
+							  </div>
+						</div>
+						<div class="col-lg-6">
+					        <div class="form-group">
+							    <label for="Fruit">Fruit du démon</label>
+							    <input type="text" formControlName="Fruit" class="form-control"  placeholder="Fruit">
+							</div>
+						</div>
+						<div class="col-lg-12">
+							  <div class="form-group">
+							    <label for="Introduction">Petite introduction</label>
+							    <textarea class="form-control"  formControlName="Introduction" rows="3" [ngClass]="{ 'is-invalid': submitted && f.Introduction.errors }"></textarea>
+							    <div *ngIf="submitted && f.Introduction.errors" class="invalid-feedback">La petite introduction est obligatoire</div>
+
+							  </div>	
+						</div>
+						<div class="col-lg-12">
+							  <div class="form-group">
+							    <label for="Description">Description</label>
+							    <textarea class="form-control" formControlName="Description" rows="8" [ngClass]="{ 'is-invalid': submitted && f.Description.errors }"></textarea>
+							    <div *ngIf="submitted && f.Description.errors" class="invalid-feedback">La description est obligatoire</div>
+
+							  </div>
+						</div>
+						<div class="col-lg-2 offset-lg-6">
+							<div class="form-group">
+								<input class="Valider" type="submit" value="Valider">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</form>
+</div>

@@ -1,0 +1,25 @@
+.container-fluid{
+
+	height: 100%;
+}
+#bg {
+  /* The image used */
+  //background-image: url("../../../assets/fond.jpg");
+
+  /* Full height */
+  height: 100%; 
+  padding-top: 10px;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#petitConteneur{
+	background-color: #E8F8FD;
+	text-align: center;
+	border-radius: 10px;
+	opacity: 0.5;
+	margin: auto;
+  margin-top: 10px;
+  padding: 15px;
+}

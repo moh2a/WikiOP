@@ -1,0 +1,84 @@
+<div id="bg" class="container-fluid">
+
+	<div class="container conteneurTrans">
+		<h2>Formulaire d'inscription</h2>
+  		<p>Pour pouvoir participer à l'aventure, tu dois t'inscrire.</p>
+  		<p>Alors ? Pirate ou Marine</p>
+	</div>
+  <div class="container mx-auto">
+      <form  class="register-form mx-auto" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+        <div class="row">
+            <div class="col-xs-3 ">
+                <div class="form-group">
+                                        <label for="Nom" class="text-uppercase">Nom</label>
+                                        <input type="text" class="form-control" 
+                                        formControlName="Nom" 
+                                        class="form-control" 
+                                        [ngClass]="{ 'is-invalid': submitted && f.Nom.errors }" >
+
+                                        <div *ngIf="submitted && f.Nom.errors" class="invalid-feedback">
+                                                <div *ngIf="f.Nom.errors.required">Name is required</div>
+                                        </div>
+                </div>
+                <div class="form-group">
+                                        <label for="Prenom" class="text-uppercase">Prenom</label>
+                                        <input type="text" class="form-control" 
+                                        formControlName="Prenom" 
+                                        class="form-control" 
+                                        [ngClass]="{ 'is-invalid': submitted && f.Prenom.errors }" >
+
+                                        <div *ngIf="submitted && f.Prenom.errors" class="invalid-feedback">
+                                                <div *ngIf="f.Prenom.errors.required">Prenom is required</div>
+                                            </div>
+                </div>
+                <div class="form-group">
+                            <label for="Type" class="text-uppercase">Type</label>
+                            <select id="" class="form-control" 
+                            formControlName="Type" 
+                            class="form-control" 
+                            [ngClass]="{ 'is-invalid': submitted && f.Type.errors }" >
+                                <option [value]="ligne" *ngFor="let ligne of type">{{ligne}}</option>
+                            </select>
+
+                             <div *ngIf="submitted && f.Type.errors" class="invalid-feedback">
+                                <div *ngIf="f.Type.errors.required">First Name is required</div>
+                            </div>
+                        </div>
+            </div>
+            <div class="col-xs-3 offset-1 ">
+                <div class="form-group">
+                                        <label for="Email" class="text-uppercase">Email</label>
+                                        <input type="text" class="form-control" 
+                                        formControlName="Email" 
+                                        class="form-control" 
+                                        [ngClass]="{ 'is-invalid': submitted && f.Email.errors }" >
+
+                                        <div *ngIf="submitted && f.Email.errors" class="invalid-feedback">
+                                                <div *ngIf="f.Email.errors">First Name is required</div>
+                                            </div>
+                </div>
+                <div class="form-group">
+                                        <label for="Password" class="text-uppercase">Password</label>
+                                        <input type="password" class="form-control" 
+                                        formControlName="Password" 
+                                        class="form-control" 
+                                        [ngClass]="{ 'is-invalid': submitted && f.Password.errors }" >
+
+                                        <div *ngIf="submitted && f.Password.errors" class="invalid-feedback">
+                                                <div *ngIf="f.Password.errors.required">First Name is required</div>
+                                            </div>
+                </div>
+                <div class="form-group form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember" required> I agree on blabla.
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Check this checkbox to continue.</div>
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+      </form>
+  </div>
+</div>

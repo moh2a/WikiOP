@@ -1,0 +1,121 @@
+<div class="hero-image" [ngStyle]="{'background-image': 'url(' + urlPhoto + ')'}">
+  <div class="hero-text">
+    <h1>{{personnage.Nom }} {{personnage.Prenom }}</h1>
+  </div>
+</div>
+<div class="container-fluid principal">
+    <div class="row">
+        
+        <div class="col-sm-4 paddigF trans">
+            <table class="tableInformations">
+                        <tbody>
+                            <tr>
+                                <td colspan="2" class=texteAuCentre>
+                                    <img src="http://localhost:8080/uploads/{{personnage.Photo}}" alt="Photo de profil">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="Separation">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="NomPrenom">
+                                    <p>{{personnage.Nom }}</p>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="NomPrenom">
+                                    <p>{{personnage.Prenom }}</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="Separation">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="texteImportant">
+                                    <p>Introduction</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" >
+                                    <p>{{personnage.Introduction }}</p>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td colspan="2" class="Separation">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="texteImportant">
+                                    <p>Informations avancées</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Age
+                                </th>
+                                <td>
+                                    {{personnage.Age }} ans
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Type
+                                </th>
+                                <td>
+                                    {{personnage.Type }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Taille
+                                </th>
+                                <td>
+                                    {{personnage.Taille }}cm
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Equipage
+                                </th>
+                                <td>
+                                    {{personnage.Equipage }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Fruit
+                                </th>
+                                <td>
+                                    {{personnage.Fruit }}
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+            </table>
+        </div>
+            <div class="col-sm-7 tableDescription trans">
+                
+                    <h2>Description</h2>
+                    <p>{{personnage.Description }}</p>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <img src="../../../assets/fondHistoire.png" >
+                            </div>
+                            
+                        </div>
+                    </div>
+                
+                
+            </div>
+        
+</div>
+
+</div>

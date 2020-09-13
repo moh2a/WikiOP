@@ -1,0 +1,247 @@
+.ruban{
+	background-color:#bfece3;
+}
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  //background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://localhost:8080/uploads/{{personnage.Photo}}");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.paddigF{
+	padding: 0;
+	
+}
+.trans{
+	opacity: 0.8;
+}
+.principal{
+	background-image: radial-gradient(circle at center, #ABAA72, #78B0B2);
+}
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #DBBBB8;
+  border-radius:10px;
+  border-color: #17686A;
+  box-shadow: 0px 1px 3px #17686A;
+  background-color: #17686A;
+  opacity: 0.5;
+}
+.conteneurImage{
+	margin: auto;
+	text-align: center;
+	//max-width: 300px;
+	height: 200px;
+}
+.card-img-top{
+	max-width: 100%;
+    height: 200px;
+    width: auto;
+}
+section{
+  display: flex;
+  flex-direction: row;
+  
+}
+p{
+	margin: 4px;
+}
+.tableInformations{
+display:block;
+margin: 5px;
+padding: 10px;
+border-spacing: 5px;
+border :1px solid #eee;
+border-radius: 3px;
+line-height: 1.2em;
+border-color: #eee;
+background-color: #eee;
+ 
+}
+.tableDescription{
+display:block;
+margin: 5px;
+padding: 10px;
+border-spacing: 5px;
+border :1px solid #eee;
+border-radius: 3px;
+line-height: 1.2em;
+border-color: #eee;
+background-color: #eee;
+height: 100%;
+  }
+.texteAuCentre{
+	text-align: center;
+	font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+}
+.texteImportant{
+	text-align: center;
+	color:#398791;
+	font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+	font-size: 18px;
+}
+.NomPrenom{
+	text-align: center;
+	color:#753991;
+	font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+	font-size: 20px;
+}
+img{
+	max-width: 150px;
+	max-height: 150px;
+}
+tbody{
+	display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+th{
+	display: table-cell;
+    font-weight: bold;
+    text-align: left;
+}
+tr{
+	display: table-row;
+    
+}
+td{
+	display: table-cell;
+}
+.Conteneur{
+display:flex;
+flex-direction:column;
+margin: 12px  auto auto 0px;
+}
+
+.photoUtilisateur{
+	height: 120px;
+	width: 120px;
+}
+.ConteneurCentral{
+display: flex;
+ flex-direction: column;
+ flex: 1;
+ border :4px solid #aaa;
+ border-radius: 3px;
+ border-color: #3E628D;
+ background-color: #eee;
+ margin: 5px;
+ 
+}
+form{
+	display: flex;
+ flex-direction: column;
+ flex: 1;
+}
+.Titre{
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+	
+	
+	background-color:#3E628D; 
+}
+
+.ConteneurInformationDeBase{
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+}
+.ConteneurInformationAvancee{
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+}
+.BoxPlusieursChamps{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+.Entree{
+	margin: auto;
+}
+
+.entreeDeTexte{
+font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+font-size:16px;
+display:inline-block;
+color:#222427;
+border:2px solid #d9d9d9;
+border-color:#3090E3;
+border-radius:5px;
+background:#fff;
+margin:10px;
+width: 250px;
+}
+.Valider{
+  border-radius:10px;
+  width:85px;
+  height:35px;
+  background: #66B14B;
+  color:#eee;
+  border-color: #3090E3;
+  font:bold 13px Arial;
+}
+.titrePage{
+	font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+	color:#C9D8DA;
+  
+}
+.titreSecondaire{
+	font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+	color: #3E628D;
+	text-align: center;
+}
+
+.ConteneurMessagerie{
+	background-color: #eee;
+	border-radius: 3px;
+ 	border :4px solid #3E628D;
+ 	height: 100px;
+ 	margin-top: 5px;
+}
+
+.TitreMessagerie{
+    justify-content: center;
+	background-color:#3E628D;
+	margin-top: 0px;
+	font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
+	color:#C9D8DA;
+}
+
+.messagerie:hover{
+	background-color: #28292A;
+	color: #e9e8e8;
+}
+
+.ConteneurMessagerie a {
+  font-family: Roboto-Black;
+  display: block;
+  text-align: center;
+  border-radius: 10px;
+  width: 200px;
+  color: black;/*rgba(0, 0, 0, .7); */
+  text-decoration: none;
+  padding: 8px 8px 11px 8px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+    0 3px 5px rgba(0, 0, 0, .2),
+    0 20px 20px rgba(0, 0, 0, .15);
+
+  transition: all .2s; /* on vient agir sur toutes les transitions du hover/focus */
+  
+}

@@ -1,0 +1,12 @@
+<div class="container">
+	<div class="card" >
+		<div class="imagePhoto">
+			<img class="card-img-top" src="http://localhost:8080/uploads/{{personnage.Photo}}" alt="Card image" >
+		</div>
+		<div class="card-body">
+			<h4 class="card-title">{{personnage.Nom}} {{personnage.Prenom}}</h4>
+			<p class="card-text"> {{personnage.Introduction}}</p>
+			<a class="stretched-link" [routerLink]="['/personnage', personnage.id]"></a>
+		</div>
+	</div>
+</div>
