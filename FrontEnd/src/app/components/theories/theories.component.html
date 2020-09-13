@@ -2,17 +2,9 @@
 <div class="container-fluid principal">
 	<app-carte-theorie-moment></app-carte-theorie-moment>
 	<div class="row ">
-		<div class="col-lg-4" >
-			<app-carte-theorie></app-carte-theorie>
-		</div>
-		<div class="col-lg-4" >
-			<app-carte-theorie></app-carte-theorie>
-		</div>
-		<div class="col-lg-4" >
-			<app-carte-theorie></app-carte-theorie>
-		</div>
-		<div class="col-lg-4" >
-			<app-carte-theorie></app-carte-theorie>
-		</div>
+		<div class="col-lg-4 Carte" *ngFor="let item of listeDesTheories">
+			<app-carte-theorie [theorieData]="item">
+			</app-carte-theorie>
+		</div>	
 	</div>
 </div>

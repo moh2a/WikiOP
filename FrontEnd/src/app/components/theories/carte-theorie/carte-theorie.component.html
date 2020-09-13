@@ -2,10 +2,10 @@
 	<div class="card" >
 		<a class="stretched-link" [routerLink]="['/theorie']"></a>
 		<div class="card-body">
-			<h4 class="card-title">Nom theorie</h4>
-			<p>Auteur : </p>
+			<h4 class="card-title">{{theorie.titre}}</h4>
+			<p>Auteur : {{theorie.auteur}}</p>
 			<i class="fas fa-heart"></i>
-			<div>vote</div>
+			<div>{{theorie.vote}}</div>
 		</div>
 	</div>
 </div>

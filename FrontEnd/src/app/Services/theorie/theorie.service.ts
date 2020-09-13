@@ -11,6 +11,18 @@ export class TheorieService {
   constructor(private http: HttpClient) { }
 
   getAllTheories():Observable<Theorie[]>{
-  	return this.http.get<Theorie[]>(`${this.url}personnages/getAllTheories`);
+  	return this.http.get<Theorie[]>(`${this.url}theorie/getAllTheories`);
   }
 }
+/*SELECT 
+    theorie,
+    auteur,
+    id,
+    titre,
+    COUNT(V.id_theorie) AS vote
+FROM 
+        theorie T
+    LEFT JOIN 
+        votes  V
+    ON 
+        T.id = V.id_theorie*/

@@ -1,7 +1,7 @@
 export class Theorie {
-    Id: number;
-    Tire: string;
+    id: number;
+    titre: string;
     theorie: string;
     auteur: string;
-    votes: number;
+    vote: number;
 }

@@ -3,15 +3,7 @@
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
 const mysql = require('mysql');
-var firebaseConfig = {
-    apiKey: "AIzaSyBZTAjwO9-76Y-0sgJYxlrKF3J3k3qiuos",
-    authDomain: "tshirt-shop-900ac.firebaseapp.com",
-    databaseURL: "https://tshirt-shop-900ac.firebaseio.com",
-    projectId: "tshirt-shop-900ac",
-    storageBucket: "",
-    messagingSenderId: "931749864223",
-    appId: "1:931749864223:web:4b70ad4687b1063e"
-  };
+
 // Initialize Firebase
 //firebase.initializeApp(firebaseConfig);
 

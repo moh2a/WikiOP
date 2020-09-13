@@ -80,12 +80,14 @@ app.use(function (request, response, next) {
 const utilisateurRoutes = require('./routes/utilisateur');
 const personnageRoutes = require('./routes/personnage');
 const fileRoutes = require('./routes/file');
+const theorieRoutes = require('./routes/theorie');
 
 // set routes to api
 app.use('/uploads', express.static('uploads'));
 app.use('/api/utilisateur', utilisateurRoutes);
 app.use('/api/personnages', personnageRoutes);
 app.use('/api/file-upload', fileRoutes);
+app.use('/api/theorie', theorieRoutes);
 // set the app to listen on the port
 app.listen(port, () => {
     console.log(`Server running on port: ${port}`);

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule, ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { PersonnagesService } from 'src/app/Services/Personnages/personnages.service';
 import { Personnage } from 'src/app/models/personnage';
 @Component({

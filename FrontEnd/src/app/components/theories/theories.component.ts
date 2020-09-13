@@ -11,7 +11,18 @@ listeDesTheories: Theorie[];
   constructor(private theorieServices: TheorieService) { }
 
   ngOnInit(): void {
-  	
+  	this.theorieServices.getAllTheories()
+    .subscribe(
+                data => {
+                  this.listeDesTheories = data as Theorie[];
+                  console.log(this.listeDesTheories);
+
+                },
+                error => {
+                  console.log(error);
+                });
+
   }
+
 
 }
