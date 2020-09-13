@@ -1,9 +1,20 @@
 <div class="container-fluid">
 	<div class="titre">
-		<h2>Nom théorie</h2>
+		<h2>{{theorie.titre}}</h2>
+	</div>
+	<hr>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-4">
+				<i class="fas fa-pen">Auteur : {{theorie.auteur}}</i> 
+			</div>
+			<div class="col-lg-4">
+				<i class="fas fa-heart">Votes : {{theorie.vote}}</i> 
+			</div>
+		</div>
 	</div>
 	<div class="Texte">
-		<p>théorie</p>
+		<p>{{theorie.theorie}}</p>
 	</div>
 	
 </div>

@@ -17,7 +17,7 @@ const routes: Routes = [
 	{ path: 'connexion', component: ConnexionComponent},
 	{ path: 'personnages', component: PersonnagesComponent},
 	{ path: 'theories', component: TheoriesComponent},
-	{ path: 'theorie', component: TheorieComponent},
+	{ path: 'theorie/:id', component: TheorieComponent},
 	{ path: 'ajouter-personnage', component: NouveauPersonnageComponent, canActivate: [AuthGuard]},
 	{ path: 'personnage/:id', component: PersonnageComponent },
 	{ path: 'admin', component: AdminComponent, canActivate: [RoleGuard], 
