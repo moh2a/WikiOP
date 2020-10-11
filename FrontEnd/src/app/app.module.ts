@@ -20,6 +20,13 @@ import { TheoriesComponent } from './components/theories/theories.component';
 import { TheorieComponent } from './components/theorie/theorie.component';
 import { CarteTheorieComponent } from './components/theories/carte-theorie/carte-theorie.component';
 import { CarteTheorieMomentComponent } from './components/theories/carte-theorie-moment/carte-theorie-moment.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import { FenetreDialogueComponent } from './components/fenetre-dialogue/fenetre-dialogue.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,14 +42,16 @@ import { CarteTheorieMomentComponent } from './components/theories/carte-theorie
     TheoriesComponent,
     TheorieComponent,
     CarteTheorieComponent,
-    CarteTheorieMomentComponent
+    CarteTheorieMomentComponent,
+    FenetreDialogueComponent
   ],
   imports: [
-  HttpClientModule,
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule, 
     FormsModule,
-    ReactiveFormsModule, FontAwesomeModule
+    ReactiveFormsModule, FontAwesomeModule, BrowserAnimationsModule,
+    MatButtonModule,MatDialogModule,MatInputModule,MatFormFieldModule,MatProgressBarModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],
   bootstrap: [AppComponent]
